@@ -1,0 +1,114 @@
+.home {
+  min-height: 1090px;
+  padding-top: 340px;
+  padding-bottom: 70px;
+  background-image: url("../public/img/home/home_bg.jpg");
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (max-width: 1023px) {
+    padding-top: 272px;
+    padding-bottom: 18px;
+  }
+  @media screen and (max-width: 768px) {
+    min-height: 784px;
+    background-image: url("../public/img/home/home_bg_mobile.png");
+  }
+}
+
+.home__container {
+  width: min(1290px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+.home__wrap {
+  width: fit-content;
+  margin-bottom: 36px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+    margin-bottom: 26px;
+    justify-content: center;
+  }
+}
+
+.home__title {
+  font-family: var(--font3);
+  font-size: 130px;
+  color: #fff;
+  text-align: center;
+
+  @media screen and (max-width: 1023px) {
+    display: flex;
+    flex-direction: column;
+    span {
+      &:first-of-type {
+        font-size: 68px;
+      }
+      &:last-of-type {
+        font-size: 47px;
+      }
+    }
+  }
+}
+
+.home__subtitle {
+  align-self: flex-end;
+  font-size: 132px;
+  color: #fff;
+
+  @media screen and (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.home__btn {
+  width: 267px;
+  height: 88px;
+  margin-bottom: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-family: var(--third-family);
+  font-size: 32px;
+  transition: box-shadow 200ms ease;
+  color: #000;
+
+  @media screen and (max-width: 1023px) {
+    width: 133px;
+    height: 43px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 315px;
+    font-size: 15px;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 2px #333 inset;
+  }
+  &:active {
+    box-shadow: 0 0 0 1px #333 inset;
+  }
+}
+
+.home__token {
+  width: fit-content;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 20px;
+  align-items: center;
+  font-family: var(--font4);
+  font-size: 18px;
+
+  @media screen and (max-width: 1023px) {
+    font-size: 12px;
+  }
+}

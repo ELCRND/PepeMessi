@@ -1,0 +1,143 @@
+.about {
+  padding-top: 117px;
+  padding-bottom: 302px;
+  position: relative;
+
+  @media screen and (max-width: 1023px) {
+    padding-top: 90px;
+    padding-bottom: 277px;
+  }
+}
+
+.about__container {
+  width: min(1292px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 43px;
+  padding-right: 43px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  @media screen and (max-width: 1023px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.about__title {
+  margin-bottom: 34px;
+  font-size: 94px;
+
+  @media screen and (max-width: 1023px) {
+    font-size: 52px;
+  }
+}
+
+.about__description {
+  max-width: 520px;
+  margin-bottom: 45px;
+  font-family: var(--third-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 180%;
+
+  @media screen and (max-width: 1023px) {
+    margin-bottom: 0;
+    font-size: 11px;
+  }
+}
+
+.about__btn {
+  width: 325px;
+  height: 84px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-family: var(--third-family);
+  font-size: 32px;
+  color: #000;
+  transition: box-shadow 200ms ease;
+
+  @media screen and (max-width: 1023px) {
+    width: 181px;
+    height: 46px;
+    font-size: 17px;
+    position: absolute;
+    bottom: -46px;
+    left: 50%;
+    translate: -50% 0;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 2px #333 inset;
+  }
+  &:active {
+    box-shadow: 0 0 0 1px #333 inset;
+  }
+}
+
+.about__img {
+  @media screen and (max-width: 1023px) {
+    width: 183px;
+    height: 183px;
+  }
+}
+
+.about__bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  @media screen and (max-width: 1023px) {
+    bottom: 109px;
+  }
+}
+
+.about__ticker {
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  @media screen and (max-width: 1023px) {
+    height: 109px;
+  }
+
+  .ticker__wrap {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    animation: tickerMove 60s linear infinite;
+    span {
+      font-size: 32px;
+      line-height: 100%;
+      color: #05070a;
+      text-wrap: nowrap;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 43px;
+      }
+    }
+  }
+}
+
+@keyframes tickerMove {
+  0% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    translate: -50% 0;
+  }
+}
