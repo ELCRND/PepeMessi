@@ -86,14 +86,14 @@
     @media screen and (max-width: 1279px) {
       top: auto;
       bottom: 0;
-      right: 24px;
-      width: calc(100% - 48px);
+      right: 23px;
+      width: calc(100% - 50px);
       height: 1px;
       background: repeating-linear-gradient(
         90deg,
         #000,
-        #000 10px,
-        #fff 10px 20px
+        #000 6px,
+        #fff 6px 10px
       );
     }
   }
