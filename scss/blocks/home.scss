@@ -5,6 +5,19 @@
   background-image: url("../public/img/home/home_bg.jpg");
   background-size: cover;
   background-position: center;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 236px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(0deg, #06080b 0%, rgba(6, 8, 11, 0) 100%);
+  }
 
   @media screen and (max-width: 1023px) {
     padding-top: 272px;

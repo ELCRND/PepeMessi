@@ -142,7 +142,7 @@ html {
 
 body {
   font-family: var(--font-family);
-  background-color: #000;
+  background-color: #06080b;
   color: #fff;
 }
 
@@ -186,6 +186,7 @@ body {
   width: 100%;
   position: absolute;
   top: 50px;
+  z-index: 10;
 }
 @media screen and (max-width: 1023px) {
   .header {
@@ -330,6 +331,18 @@ body {
   background-image: url("../public/img/home/home_bg.jpg");
   background-size: cover;
   background-position: center;
+  position: relative;
+  z-index: 1;
+}
+.home::before {
+  content: "";
+  width: 100%;
+  height: 236px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(0deg, #06080b 0%, rgba(6, 8, 11, 0) 100%);
 }
 @media screen and (max-width: 1023px) {
   .home {
@@ -1201,8 +1214,6 @@ body {
 .footer__btn {
   width: 207px;
   height: 84px;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1216,6 +1227,8 @@ body {
   .footer__btn {
     grid-row: 2/3;
     grid-column: 1/3;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 768px) {
